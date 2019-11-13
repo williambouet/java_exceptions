@@ -1,32 +1,38 @@
 import java.util.ArrayList;
 
 public class OddSum {
-	
-	public static void main(String[] args) {
-		run(args, false );
-	}
-	public static int run(String[] args, boolean test) {
-		ArrayList<Integer> listInt = new ArrayList<>();
-		int res;
-		if(!test) {
-			System.out.println("Liste des élements :");
-			for (String v : args)
-				System.out.print(" " + v);
-			System.out.println();
-		}
-		for (int i = 0; i < args.length; i++)
-			listInt.add(Integer.parseInt(args[i]));
-		
-		res = sum(listInt);
-		if(test)
-			return res;
-		System.out.println("La somme des élements impaires est : " + res);
-		System.out.println("FIN !!");
-		return 0;
-		
-	}
-	
+
+    public static void main(String[] args) {
+        run(args, false);
+    }
+
+    public static int run(String[] args, boolean test) {
+
+        ArrayList<Integer> listInt = new ArrayList<>();
+        int res;
+        if (!test) {
+            System.out.println("Elements' list :");
+            for (String v : args)
+                System.out.print(" " + v);
+            System.out.println();
+        }
+        for (int i = 0; i < args.length; i++) {
+            listInt.add(Integer.parseInt(args[i]));
+        }
+
+        res = sum(listInt);
+        if (test) {
+            return res;
+        }
+
+        System.out.println("Sum of odd elements : " + res);
+        System.out.println("END!");
+
+        return 0;
+    }
+
     public static int sum(ArrayList<Integer> listInt) {
+
         int result = 0;
         for (int value : listInt) {
             if (value % 2 != 0) {
