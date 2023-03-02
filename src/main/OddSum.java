@@ -16,19 +16,25 @@ public class OddSum {
                 System.out.print(" " + v);
             System.out.println();
         }
-        for (int i = 0; i < args.length; i++) {
-            listInt.add(Integer.parseInt(args[i]));
-        }
+        try {
+            for (int i = 0; i < args.length; i++) {
+                listInt.add(Integer.parseInt(args[i]));
+            }
+            res = sum(listInt);
+            if (test) {
+                return res;
+            }
+            
+            System.out.println("Sum of odd elements : " + res);
+            System.out.println("END!");
+            
+        } catch (Exception e) {
+            System.out.println("Il ne faut que des chiffres");
+            
+        }           
+            return 0;
+        
 
-        res = sum(listInt);
-        if (test) {
-            return res;
-        }
-
-        System.out.println("Sum of odd elements : " + res);
-        System.out.println("END!");
-
-        return 0;
     }
 
     public static int sum(ArrayList<Integer> listInt) {
