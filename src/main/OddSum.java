@@ -29,7 +29,7 @@ public class OddSum {
             System.out.println("END!");
             
         } catch (Exception e) {
-            System.out.println("Il ne faut que des chiffres");
+            throw new NumberFormatException("Il ne faut que des chiffres");
             
         }           
             return 0;
